@@ -14,3 +14,8 @@ exports.createStore = async (req, res) => {
     await store.save();
     res.redirect('/');
 };
+
+exports.getStores = async (req, res) => {
+    const stores = await Store.find();
+    res.json(stores);
+}
