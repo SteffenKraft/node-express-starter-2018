@@ -41,3 +41,7 @@ exports.editStore = async (req, res) => {
     res.json(store);
 }
 
+exports.getStoresByTag = async (req, res) => {
+    const tags = await Store.getStoresByTag();
+    res.json(tags);
+}
