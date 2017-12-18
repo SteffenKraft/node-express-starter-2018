@@ -24,3 +24,20 @@ exports.getStoreById = async (req, res) => {
     const store = await Store.findOne({ _id: req.params.id });
     res.json(store);
 }
+
+exports.editStore = async (req, res) => {
+    const store = await Store.findOneAndUpdate(
+        { _id: req.params.id }, // query selector
+        {
+            name: 'new shop Name',
+            description: 'nwe description sfsda fdsa g dasg sad g',
+            tags: ['new', 'shoes', 'shorts', 'underwear']
+        }, // new object values
+        {
+            new: true, // retrun new store instead of old one
+            runValidators: true // run all required, trim etc of the Store model again
+        }, // options
+    ).exec(); // execute the update
+    res.json(store);
+}
+
