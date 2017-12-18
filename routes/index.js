@@ -6,8 +6,8 @@ const { catchErrors } = require('../handlers/errorHandlers');
 router.get('/', catchErrors(controller.getStores));
 router.get('/stores', catchErrors(controller.getStores));
 router.get('/stores/:id', catchErrors(controller.getStoreById));
-router.get('/stores/:id/edit', catchErrors(controller.editStore));
-router.get('/add', catchErrors(controller.createStore));
+router.post('/stores/:id/edit', catchErrors(controller.editStore));
+router.post('/add', catchErrors(controller.createStore));
 router.get('/tags', catchErrors(controller.getStoresByTag));
 router.get('/tags/:tag', catchErrors(controller.getStoresByTag));
 

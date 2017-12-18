@@ -1,0 +1,173 @@
+{
+	"info": {
+		"name": "shop",
+		"_postman_id": "544d5287-91c2-e189-63f4-8ab9693b759f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/add?name=post shop name&description=post description sfsdf sdfa sda  dsa gsd ag&tags[0]=post&tags[1]=wifi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"add"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "post shop name",
+							"equals": true
+						},
+						{
+							"key": "description",
+							"value": "post description sfsdf sdfa sda  dsa gsd ag",
+							"equals": true
+						},
+						{
+							"key": "tags[0]",
+							"value": "post",
+							"equals": true
+						},
+						{
+							"key": "tags[1]",
+							"value": "wifi",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get stores by tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"tags"
+					]
+				},
+				"description": "/tags \nwill return tag list and all stores "
+			},
+			"response": []
+		},
+		{
+			"name": "get stores by specific tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/tags/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"tags",
+						"new"
+					]
+				},
+				"description": "/tags/:tag\nwill return atg list and all stores with this specific tag"
+			},
+			"response": []
+		},
+		{
+			"name": "get store by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/stores/5a3813a9514ea4ce01553106",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"stores",
+						"5a3813a9514ea4ce01553106"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/stores/5a3813a9514ea4ce01553106/edit?name=new Name&tags[0]=new tag&tags[1]=new new tag&description=new description dsfadsgdasg adg ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"stores",
+						"5a3813a9514ea4ce01553106",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "new Name",
+							"equals": true
+						},
+						{
+							"key": "tags[0]",
+							"value": "new tag",
+							"equals": true
+						},
+						{
+							"key": "tags[1]",
+							"value": "new new tag",
+							"equals": true
+						},
+						{
+							"key": "description",
+							"value": "new description dsfadsgdasg adg ad",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

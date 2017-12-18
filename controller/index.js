@@ -6,11 +6,7 @@ exports.homePage = (req, res) => {
 }
 
 exports.createStore = async (req, res) => {
-    const store = new Store({
-        name: 'shop Name',
-        description: 'description sfsda fdsa g dasg sad g',
-        tags: ['shoes', 'shorts', 'underwear']
-    });
+    const store = new Store(req.query);
     await store.save();
     res.redirect('/');
 };
@@ -28,11 +24,7 @@ exports.getStoreById = async (req, res) => {
 exports.editStore = async (req, res) => {
     const store = await Store.findOneAndUpdate(
         { _id: req.params.id }, // query selector
-        {
-            name: 'new shop Name',
-            description: 'nwe description sfsda fdsa g dasg sad g',
-            tags: ['new', 'shoes', 'shorts', 'underwear']
-        }, // new object values
+        req.query,
         {
             new: true, // retrun new store instead of old one
             runValidators: true // run all required, trim etc of the Store model again
