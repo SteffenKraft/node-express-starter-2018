@@ -42,6 +42,13 @@ exports.editStore = async (req, res) => {
 }
 
 exports.getStoresByTag = async (req, res) => {
-    const tags = await Store.getStoresByTag();
-    res.json(tags);
+    const tagQuery = req.params.tag || { $exists: true }
+    // get always all tags grouped and sorted
+    const tagsPromise = Store.getStoresByTag();
+    // get all stores by the tag param, no tag defined get all stores (tagQuery)
+    const storesPromise = Store.find({ tags: tagQuery });
+    // when both queries are done destructor into two arrays tags and stores
+    const [ tags, stores ] = await Promise.all([tagsPromise, storesPromise]);
+    // output json
+    res.json({ tags, stores });
 }
