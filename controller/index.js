@@ -19,3 +19,8 @@ exports.getStores = async (req, res) => {
     const stores = await Store.find();
     res.json(stores);
 }
+
+exports.getStoreById = async (req, res) => {
+    const store = await Store.findOne({ _id: req.params.id });
+    res.json(store);
+}
