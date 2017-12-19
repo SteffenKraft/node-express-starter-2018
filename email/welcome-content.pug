@@ -1,0 +1,9 @@
+extends email-layout
+
+block content
+  h2 Welcome to node-starter-2018
+  p Congratulation if you made it so far.
+  +button(testURL, 'dummy button →')
+  p If you can't click the above button please visit #{testURL}
+  br
+  p If you didn't request this email, please ignore it.

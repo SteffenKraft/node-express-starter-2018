@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const promisify = require('es6-promisify');
+const mail = require('../handlers/mail');
 
 exports.validateRegister = (req, res, next) => {
     req.sanitizeBody('name');
@@ -22,6 +23,13 @@ exports.register = async (req, res, next) => {
     const user = new User({ email: req.body.email, name: req.body.name });
     const register = promisify(User.register, User);
     await register(user, req.body.password);
+    // sending a welcome mail check ../handlers/mail.js for configuration and usage
+    await mail.send({
+        user,
+        filename: 'welcome-content',
+        subject: 'welcome to node-starter-2018',
+        testURL: "http://test.de"
+    });
     next(); // pass to authController.login
 };
 
