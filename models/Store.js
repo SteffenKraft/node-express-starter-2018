@@ -25,6 +25,12 @@ storeSchema.pre('save', function(next) {
   next();
 });
 
+// Define our indexes
+storeSchema.index({
+  name: 'text',
+  description: 'text'
+});
+
 storeSchema.statics.getStoresByTag = function() {
   return this.aggregate([
     { $unwind:  '$tags' },

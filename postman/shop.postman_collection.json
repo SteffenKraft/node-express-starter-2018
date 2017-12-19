@@ -397,6 +397,34 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "search stores by name & description",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/searchStores?q=postMan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"searchStores"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "postMan",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

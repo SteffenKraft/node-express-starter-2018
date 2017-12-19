@@ -12,6 +12,7 @@ router.post('/stores/:id/edit', catchErrors(storeController.editStore));
 router.post('/add', catchErrors(storeController.createStore));
 router.get('/tags', catchErrors(storeController.getStoresByTag));
 router.get('/tags/:tag', catchErrors(storeController.getStoresByTag));
+router.get('/searchStores', catchErrors(storeController.searchStores));
 
 router.get('/user',
     authController.isLoggedIn,
