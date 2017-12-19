@@ -28,3 +28,18 @@ exports.register = async (req, res, next) => {
 exports.user = (req, res) => {
     res.json({ user: req.user, avatar: req.user.gravatar });
 }
+
+exports.updateUser = async (req, res) => {
+    const updates = {
+      name: req.body.name,
+      email: req.body.email
+    };
+
+    const user = await User.findOneAndUpdate(
+      { _id: req.user._id },
+      { $set: updates },
+      { new: true, runValidators: true, context: 'query' }
+    );
+
+    res.json(user);
+};

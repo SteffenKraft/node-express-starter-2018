@@ -18,6 +18,11 @@ router.get('/user',
     userController.user
 );
 
+router.post('/user',
+    authController.isLoggedIn,
+    catchErrors(userController.updateUser)
+);
+
 router.post('/register',
     userController.validateRegister,
     userController.register,
