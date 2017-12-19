@@ -1,7 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
+const passport = require('passport');
 const routes = require('./routes/index');
 const errorHandlers = require('./handlers/errorHandlers')
+require('./handlers/passport');
 
 // create our Express app
 const app = express();
@@ -9,6 +12,13 @@ const app = express();
 // Takes the raw requests and turns them into usable properties on req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Exposes a bunch of methods for validating data. Used heavily on userController.validateRegister
+app.use(expressValidator());
+
+// // Passport JS is what we use to handle our logins
+app.use(passport.initialize());
+app.use(passport.session());
 
 // After allllll that above middleware, we finally handle our own routes!
 app.use('/', routes);

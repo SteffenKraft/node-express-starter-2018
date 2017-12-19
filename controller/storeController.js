@@ -6,7 +6,7 @@ exports.homePage = (req, res) => {
 }
 
 exports.createStore = async (req, res) => {
-    const store = new Store(req.query);
+    const store = new Store(req.body);
     await store.save();
     res.redirect('/');
 };
@@ -24,7 +24,7 @@ exports.getStoreById = async (req, res) => {
 exports.editStore = async (req, res) => {
     const store = await Store.findOneAndUpdate(
         { _id: req.params.id }, // query selector
-        req.query,
+        req.body,
         {
             new: true, // retrun new store instead of old one
             runValidators: true // run all required, trim etc of the Store model again
@@ -43,4 +43,9 @@ exports.getStoresByTag = async (req, res) => {
     const [ tags, stores ] = await Promise.all([tagsPromise, storesPromise]);
     // output json
     res.json({ tags, stores });
+}
+
+
+exports.register = (req, res) => {
+    res.send('register');
 }

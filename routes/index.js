@@ -1,14 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controller');
+const storeController = require('../controller/storeController');
+const userController = require('../controller/userController')
+const authController = require('../controller/authController')
 const { catchErrors } = require('../handlers/errorHandlers');
 
-router.get('/', catchErrors(controller.getStores));
-router.get('/stores', catchErrors(controller.getStores));
-router.get('/stores/:id', catchErrors(controller.getStoreById));
-router.post('/stores/:id/edit', catchErrors(controller.editStore));
-router.post('/add', catchErrors(controller.createStore));
-router.get('/tags', catchErrors(controller.getStoresByTag));
-router.get('/tags/:tag', catchErrors(controller.getStoresByTag));
+router.get('/', catchErrors(storeController.getStores));
+router.get('/stores', catchErrors(storeController.getStores));
+router.get('/stores/:id', catchErrors(storeController.getStoreById));
+router.post('/stores/:id/edit', catchErrors(storeController.editStore));
+router.post('/add', catchErrors(storeController.createStore));
+router.get('/tags', catchErrors(storeController.getStoresByTag));
+router.get('/tags/:tag', catchErrors(storeController.getStoresByTag));
+
+router.post('/register',
+    userController.validateRegister,
+    userController.register,
+    authController.login,
+);
 
 module.exports = router;

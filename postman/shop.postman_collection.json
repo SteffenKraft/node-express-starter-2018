@@ -1,7 +1,7 @@
 {
 	"info": {
 		"name": "shop",
-		"_postman_id": "544d5287-91c2-e189-63f4-8ab9693b759f",
+		"_postman_id": "d70b1d94-36dd-5974-b0f2-8d588077cb9d",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -16,9 +16,43 @@
 						"value": "application/x-www-form-urlencoded"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "postMan shop",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "desciption",
+							"value": "postMan description sfsadf gds g dasg sadg dsa ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags[0]",
+							"value": "postman",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags[1]",
+							"value": "wifi",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags[2]",
+							"value": "shoes",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "http://localhost:7777/add?name=post shop name&description=post description sfsdf sdfa sda  dsa gsd ag&tags[0]=post&tags[1]=wifi",
+					"raw": "http://localhost:7777/add",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -26,31 +60,8 @@
 					"port": "7777",
 					"path": [
 						"add"
-					],
-					"query": [
-						{
-							"key": "name",
-							"value": "post shop name",
-							"equals": true
-						},
-						{
-							"key": "description",
-							"value": "post description sfsdf sdfa sda  dsa gsd ag",
-							"equals": true
-						},
-						{
-							"key": "tags[0]",
-							"value": "post",
-							"equals": true
-						},
-						{
-							"key": "tags[1]",
-							"value": "wifi",
-							"equals": true
-						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -114,8 +125,7 @@
 						"stores",
 						"5a3813a9514ea4ce01553106"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -129,9 +139,37 @@
 						"value": "application/x-www-form-urlencoded"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "new Postman name",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "new Postman description sfsadg dag dfg d ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags[0]",
+							"value": "postman",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags[1]",
+							"value": "wifi",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "http://localhost:7777/stores/5a3813a9514ea4ce01553106/edit?name=new Name&tags[0]=new tag&tags[1]=new new tag&description=new description dsfadsgdasg adg ad",
+					"raw": "http://localhost:7777/stores/5a3813a9514ea4ce01553106/edit",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -141,28 +179,87 @@
 						"stores",
 						"5a3813a9514ea4ce01553106",
 						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Peter",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "peter@mail.de",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password-confirm",
+							"value": "123",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7777/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"register"
 					],
 					"query": [
 						{
 							"key": "name",
-							"value": "new Name",
-							"equals": true
-						},
-						{
-							"key": "tags[0]",
-							"value": "new tag",
-							"equals": true
-						},
-						{
-							"key": "tags[1]",
-							"value": "new new tag",
-							"equals": true
-						},
-						{
-							"key": "description",
-							"value": "new description dsfadsgdasg adg ad",
-							"equals": true
+							"value": "safsaf",
+							"equals": true,
+							"disabled": true
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/stores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"stores"
 					]
 				},
 				"description": ""
