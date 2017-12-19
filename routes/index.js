@@ -13,6 +13,8 @@ router.post('/add', catchErrors(storeController.createStore));
 router.get('/tags', catchErrors(storeController.getStoresByTag));
 router.get('/tags/:tag', catchErrors(storeController.getStoresByTag));
 
+router.get('/user', userController.user);
+
 router.post('/register',
     userController.validateRegister,
     userController.register,

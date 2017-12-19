@@ -24,3 +24,7 @@ exports.register = async (req, res, next) => {
     await register(user, req.body.password);
     next(); // pass to authController.login
 };
+
+exports.user = (req, res) => {
+    res.json({ user: req.user, avatar: req.user.gravatar });
+}
