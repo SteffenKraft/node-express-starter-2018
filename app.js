@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
+const session = require('express-session');
+const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 const routes = require('./routes/index');
 const errorHandlers = require('./handlers/errorHandlers')
@@ -16,9 +19,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Exposes a bunch of methods for validating data. Used heavily on userController.validateRegister
 app.use(expressValidator());
 
+// Sessions allow us to store data on visitors from request to request
+// This keeps users logged in and allows us to send flash messages
+app.use(session({
+  secret: process.env.SECRET,
+  key: process.env.KEY,
+  resave: false,
+  saveUninitialized: false,
+  store: new MongoStore({ mongooseConnection: mongoose.connection })
+}));
+
 // // Passport JS is what we use to handle our logins
 app.use(passport.initialize());
 app.use(passport.session());
+
+// pass variables to our templates + all requests
+app.use((req, res, next) => {
+  res.locals.user = req.user || null;
+  next();
+});
 
 // After allllll that above middleware, we finally handle our own routes!
 app.use('/', routes);

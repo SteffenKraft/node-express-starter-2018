@@ -9,3 +9,8 @@ exports.login = passport.authenticate(
         successRedirect: '/',
     }
 );
+
+exports.logout = (req, res) => {
+    req.logout();
+    res.send('you are logout');
+}

@@ -265,6 +265,27 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "logout user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:7777/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"logout"
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
