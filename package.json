@@ -4,7 +4,8 @@
   "main": "start.js",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"nodemon ./start.js\" \"cd client && yarn run dev\""
+    "start": "concurrently \"nodemon ./start.js\" \"cd client && yarn run dev\"",
+    "server": "nodemon ./start.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
