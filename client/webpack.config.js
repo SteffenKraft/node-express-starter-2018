@@ -35,6 +35,14 @@ module.exports = (env = {}) => {
     },
     devServer: {
       historyApiFallback: isProduction ? false : true,
+      proxy: isProduction
+      ? false
+      : {
+          "/api": {
+            target: "http://localhost:7777/",
+            secure: false,
+          },
+        }
     },
     devtool: isProduction
       ? "hidden-source-map"

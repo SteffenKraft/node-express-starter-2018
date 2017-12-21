@@ -4,10 +4,11 @@
   "main": "start.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./start.js --ignore public/"
+    "start": "concurrently \"nodemon ./start.js\" \"cd client && yarn run dev\""
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
     "connect-mongo": "^2.0.0",
     "dotenv": "^4.0.0",
     "es6-promisify": "^5.0.0",

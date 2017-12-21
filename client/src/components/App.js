@@ -9,6 +9,10 @@ import ProductView from "./product/ProductView";
 import baseStyles from "../styles/baseStyles";
 
 const App = () => {
+  // TODO load data instead of console.log it
+  const store = fetch("api/stores/5a3813a9514ea4ce01553106");
+  store.then(data => data.json()).then(data => console.log(data));
+
   baseStyles();
   return (
     <div>
