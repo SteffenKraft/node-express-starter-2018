@@ -1,0 +1,36 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "parser": "babel-eslint",
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/forbid-prop-types": 0,
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "constructor",
+          "state",
+          "static-methods",
+          "render",
+          "/^render.+$/",
+          "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+          "lifecycle",
+          "/^on.+$/",
+          "everything-else"
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all"
+      }
+    ]
+  },
+  "env": {
+    "browser": true
+  },
+  "plugins": ["prettier"]
+}
