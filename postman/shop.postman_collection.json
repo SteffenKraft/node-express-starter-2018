@@ -1,8 +1,7 @@
 {
 	"info": {
 		"name": "shop",
-		"_postman_id": "d70b1d94-36dd-5974-b0f2-8d588077cb9d",
-		"description": "",
+		"_postman_id": "8db942da-f00e-1b6d-dfd3-a3d5b46750cd",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -22,43 +21,39 @@
 						{
 							"key": "name",
 							"value": "postMan shop",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "desciption",
 							"value": "postMan description sfsadf gds g dasg sadg dsa ",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "tags[0]",
 							"value": "postman",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "tags[1]",
 							"value": "wifi",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "tags[2]",
 							"value": "shoes",
-							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:7777/add",
+					"raw": "http://localhost:7777/api/add",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"add"
 					]
 				}
@@ -72,13 +67,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:7777/tags",
+					"raw": "http://localhost:7777/api/tags",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"tags"
 					]
 				},
@@ -93,13 +89,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:7777/tags/new",
+					"raw": "http://localhost:7777/api/tags/new",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"tags",
 						"new"
 					]
@@ -115,13 +112,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:7777/stores/5a3813a9514ea4ce01553106",
+					"raw": "http://localhost:7777/api/stores/5a3813a9514ea4ce01553106",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"stores",
 						"5a3813a9514ea4ce01553106"
 					]
@@ -145,37 +143,34 @@
 						{
 							"key": "name",
 							"value": "new Postman name",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "description",
 							"value": "new Postman description sfsadg dag dfg d ",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "tags[0]",
 							"value": "postman",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "tags[1]",
 							"value": "wifi",
-							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:7777/stores/5a3813a9514ea4ce01553106/edit",
+					"raw": "http://localhost:7777/api/stores/5a3813a9514ea4ce01553106/edit",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"stores",
 						"5a3813a9514ea4ce01553106",
 						"edit"
@@ -200,37 +195,34 @@
 						{
 							"key": "name",
 							"value": "Peter",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "email",
 							"value": "peter@mail.de",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "password",
 							"value": "123",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "password-confirm",
 							"value": "123",
-							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:7777/register",
+					"raw": "http://localhost:7777/api/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"register"
 					],
 					"query": [
@@ -261,25 +253,24 @@
 						{
 							"key": "email",
 							"value": "peter@mail.de",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "password",
 							"value": "123",
-							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:7777/login",
+					"raw": "http://localhost:7777/api/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"login"
 					],
 					"query": [
@@ -309,27 +300,26 @@
 					"urlencoded": [
 						{
 							"key": "email",
-							"value": "peter@mail.de",
-							"description": "",
+							"value": "peter.new@mail.de",
 							"type": "text"
 						},
 						{
-							"key": "password",
-							"value": "123",
-							"description": "",
+							"key": "name",
+							"value": "peter new",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:7777/login",
+					"raw": "http://localhost:7777/api/user",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
-						"login"
+						"api",
+						"user"
 					],
 					"query": [
 						{
@@ -350,17 +340,17 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:7777/stores",
+					"raw": "http://localhost:7777/api/stores",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"stores"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -371,17 +361,17 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:7777/logout",
+					"raw": "http://localhost:7777/api/logout",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"logout"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -392,9 +382,17 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": ""
-				},
-				"description": ""
+					"raw": "http://localhost:7777/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"user"
+					]
+				}
 			},
 			"response": []
 		},
@@ -405,13 +403,14 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:7777/searchStores?q=postMan",
+					"raw": "http://localhost:7777/api/searchStores?q=postMan",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "7777",
 					"path": [
+						"api",
 						"searchStores"
 					],
 					"query": [
@@ -421,8 +420,7 @@
 							"equals": true
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		}

@@ -5,8 +5,8 @@ const User = mongoose.model('User');
 exports.login = passport.authenticate(
     'local',
     {
-        failureRedirect: '/login',
-        successRedirect: '/',
+        failureRedirect: '/api',
+        successRedirect: '/api',
     }
 );
 
