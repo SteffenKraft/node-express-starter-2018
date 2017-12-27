@@ -1,6 +1,6 @@
-import { injectGlobal } from "styled-components";
-import reset from "styled-reset";
-import theme from "./theme";
+import { injectGlobal } from 'styled-components';
+import reset from 'styled-reset';
+import theme from './theme';
 
 /* stylelint-disable */
 const baseStyles = () => injectGlobal`

@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Icon from "./Icon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Icon from './Icon';
 
 const IconDone = ({ svgProps, svgStyles }) => (
   <Icon svgProps={svgProps} svgStyles={svgStyles}>

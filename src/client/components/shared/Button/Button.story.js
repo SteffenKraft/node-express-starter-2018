@@ -1,13 +1,13 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
 // import theme from "../../../styles/theme";
-import { IconDone, IconPower, IconFacebook } from "../../shared/Icons";
+import { IconDone, IconPower, IconFacebook } from '../../shared/Icons';
 
-import Button from "./Button";
+import Button from './Button';
 
-storiesOf("Buttons", module)
-  .add("all", () => (
+storiesOf('Buttons', module)
+  .add('all', () => (
     <div>
       <Button>I am the default Button</Button>
       <Button inverse>I am the default inverse Button</Button>
@@ -21,7 +21,7 @@ storiesOf("Buttons", module)
       </Button>
     </div>
   ))
-  .add("all fullWidth", () => (
+  .add('all fullWidth', () => (
     <div>
       <Button fullWidth>I am the default Button</Button>
       <Button inverse fullWidth>
@@ -41,7 +41,7 @@ storiesOf("Buttons", module)
       </Button>
     </div>
   ))
-  .add("all with Icon", () => (
+  .add('all with Icon', () => (
     <div>
       <Button>
         <IconDone /> I am the default Button

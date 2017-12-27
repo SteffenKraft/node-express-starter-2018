@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Icon from "./Icon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Icon from './Icon';
 
 const defaultSvgProps = {
-  viewBox: "0 0 21 24",
+  viewBox: '0 0 21 24',
 };
 const defaultSvgStyles = {
-  bottom: "0.08em",
-  fill: "#3b5998",
+  bottom: '0.08em',
+  fill: '#3b5998',
 };
 
 const IconFacebook = ({ svgProps, svgStyles }) => (

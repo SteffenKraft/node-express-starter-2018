@@ -1,20 +1,20 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const expressValidator = require("express-validator");
-const session = require("express-session");
-const path = require("path");
-const mongoose = require("mongoose");
-const MongoStore = require("connect-mongo")(session);
-const passport = require("passport");
-const routes = require("./routes/index");
-const errorHandlers = require("./handlers/errorHandlers");
-require("./handlers/passport");
+const express = require('express');
+const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
+const session = require('express-session');
+const path = require('path');
+const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
+const passport = require('passport');
+const routes = require('./routes/index');
+const errorHandlers = require('./handlers/errorHandlers');
+require('./handlers/passport');
 
 // create our Express app
 const app = express();
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("build"));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('build'));
 }
 
 // Takes the raw requests and turns them into usable properties on req.body
@@ -47,12 +47,12 @@ app.use((req, res, next) => {
 });
 
 // After allllll that above middleware, we finally handle our own routes!
-app.use("/api", routes);
+app.use('/api', routes);
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
   // All remaining requests return the React app, so it can handle routing.
-  app.get("*", (request, response) => {
-    response.sendFile(path.resolve(__dirname, "../../build", "index.html"));
+  app.get('*', (request, response) => {
+    response.sendFile(path.resolve(__dirname, '../../build', 'index.html'));
   });
 }
 
@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(errorHandlers.notFound);
 
 // Otherwise this was a really bad error we didn't expect! Shoot eh
-if (app.get("env") === "development") {
+if (app.get('env') === 'development') {
   /* Development Error Handler - Prints stack trace */
   app.use(errorHandlers.developmentErrors);
 }

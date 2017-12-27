@@ -1,15 +1,15 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const Store = mongoose.model("Store");
+const Store = mongoose.model('Store');
 
 exports.homePage = (req, res) => {
-  res.json({ name: "hans", cool: true });
+  res.json({ name: 'hans', cool: true });
 };
 
 exports.createStore = async (req, res) => {
   const store = new Store(req.body);
   await store.save();
-  res.redirect("/");
+  res.redirect('/');
 };
 
 exports.getStores = async (req, res) => {
@@ -56,12 +56,12 @@ exports.searchStores = async (req, res) => {
         },
       },
       {
-        score: { $meta: "textScore" },
+        score: { $meta: 'textScore' },
       },
     )
     // the sort them
     .sort({
-      score: { $meta: "textScore" },
+      score: { $meta: 'textScore' },
     })
     // limit to only 5 results
     .limit(5);

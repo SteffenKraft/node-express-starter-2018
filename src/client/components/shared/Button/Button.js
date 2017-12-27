@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import theme from "../../../styles/theme";
+import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import theme from '../../../styles/theme';
 
 const ButtonStyled = styled.button`
   display: block;
@@ -16,7 +16,7 @@ const ButtonStyled = styled.button`
   cursor: pointer;
   text-transform: uppercase;
   font-size: ${theme.fontSizes.mediumLarge};
-  width: ${props => (props.fullWidth ? "100%" : "auto")};
+  width: ${props => (props.fullWidth ? '100%' : 'auto')};
   outline: none;
 
   &:hover {
@@ -76,7 +76,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   onClick: null,
-  type: "default",
+  type: 'default',
   fullWidth: false,
   styles: {},
   inverse: false,

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Sheep from "./sheep.jpg";
-import Button from "../shared/Button/Button";
-import { IconDone, IconPower, IconFacebook } from "../shared/Icons";
+import Sheep from './sheep.jpg';
+import Button from '../shared/Button/Button';
+import { IconDone, IconPower, IconFacebook } from '../shared/Icons';
 
 const Intro = styled.div`
   background-image: url(${Sheep});
@@ -30,14 +30,14 @@ const HomeView = () => (
       <IconDone /> I am a inverse default Button
     </Button>
     <Button fullWidth type="secondary" onClick={handleClick}>
-      <IconFacebook svgStyles={{ fill: "currentColor" }} /> I am A secondary
+      <IconFacebook svgStyles={{ fill: 'currentColor' }} /> I am A secondary
       Button
     </Button>
     <Button inverse fullWidth type="secondary" onClick={handleClick}>
       <IconPower /> I am a inverse secondary Button
     </Button>
     <Button type="disabled">
-      <IconPower svgProps={{ width: "40px", height: "40px" }} /> I am the
+      <IconPower svgProps={{ width: '40px', height: '40px' }} /> I am the
       disabled Button
     </Button>
     <Button inverse type="disabled">

@@ -23,12 +23,7 @@
         ]
       }
     ],
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "all"
-      }
-    ]
+    "prettier/prettier": "error"
   },
   "env": {
     "browser": true
