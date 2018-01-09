@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Sheep from './sheep.jpg';
 import Button from '../shared/Button/Button';
 import { IconDone, IconPower, IconFacebook } from '../shared/Icons';
+import { Headline } from '../shared/Typography/Typography';
 
 const Intro = styled.div`
   background-image: url(${Sheep});
@@ -23,6 +24,10 @@ const HomeView = () => (
     <IconDone />
     <IconFacebook />
     <IconPower />
+    <Headline>
+      <IconPower /> Hellooo Headinnngg
+    </Headline>
+    <Headline>Hellooo Headinnngg</Headline>
     <Button onClick={handleClick}>
       <IconDone /> I am the default Button
     </Button>

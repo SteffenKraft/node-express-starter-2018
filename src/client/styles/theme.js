@@ -1,13 +1,14 @@
 const theme = {
   fontSizes: {
-    smallest: '0.5625rem', // 9px
-    smaller: '0.6875rem', // 11px
-    small: '0.8125rem', // 13px
-    medium: '1rem', // 16px
-    mediumLarge: '1.125rem', // 18px
-    large: '1.75rem', // 22px
-    Larger: '2.25rem', // 36px
-    Largest: '3rem', // 48px
+    small: '1.2rem',
+    body: '1.4rem',
+    subHeadline1: '1.5rem',
+    subHeadline2: '1.6rem',
+    title: '2rem',
+    headline: '2.4rem',
+    display1: '3.4rem',
+    display2: '4.5rem',
+    display3: '5.6rem',
   },
   colors: {
     primary: '#428bca',

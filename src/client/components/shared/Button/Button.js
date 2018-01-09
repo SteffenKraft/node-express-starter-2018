@@ -15,7 +15,7 @@ const ButtonStyled = styled.button`
   border: 2px solid ${theme.colors.primary};
   cursor: pointer;
   text-transform: uppercase;
-  font-size: ${theme.fontSizes.mediumLarge};
+  font-size: ${theme.fontSizes.subHeadline2};
   width: ${props => (props.fullWidth ? '100%' : 'auto')};
   outline: none;
 

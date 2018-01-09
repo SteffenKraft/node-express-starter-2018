@@ -22,7 +22,7 @@ storiesOf('Icons', module)
           key={key}
           style={{
             margin: '20px',
-            fontSize: theme.fontSizes.large,
+            fontSize: theme.fontSizes.title,
             color: theme.colors.secondary,
           }}
         >
