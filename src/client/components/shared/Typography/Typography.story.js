@@ -82,4 +82,40 @@ storiesOf('Typography', module)
         consectetur adipiscing elit
       </Paragraph>
     </div>
+  ))
+  .add('all uppercase', () => (
+    <div>
+      <Display3 uppercase>Display3 - h1</Display3>
+      <hr />
+      <Display2 uppercase>Display2 - h1</Display2>
+      <hr />
+      <Display2 uppercase>Display2 - h1</Display2>
+      <hr />
+      <Display1 uppercase>Display1 - h1</Display1>
+      <hr />
+      <Headline uppercase>Heading - h1</Headline>
+      <hr />
+      <Title uppercase>Title - h2</Title>
+      <hr />
+      <SubHeadline2 uppercase>SubHeadline2 - h3</SubHeadline2>
+      <hr />
+      <SubHeadline1 uppercase>SubHeadline1 - h4</SubHeadline1>
+      <hr />
+      <Paragraph uppercase>
+        Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </Paragraph>
+      <hr />
+      <ParagraphBold uppercase>
+        Paragraph. text, calling something out.
+      </ParagraphBold>
+      <hr />
+      <Paragraph>
+        Paragraph with SpanBold. Lorem ipsum dolor{' '}
+        <SpanBold uppercase>SpanBold</SpanBold>, consectetur adipiscing elit
+      </Paragraph>
+    </div>
   ));
