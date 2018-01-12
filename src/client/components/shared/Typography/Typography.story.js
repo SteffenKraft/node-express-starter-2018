@@ -15,7 +15,7 @@ import {
 } from './Typography';
 
 storiesOf('Typography', module)
-  .add('all', () => (
+  .add('All', () => (
     <div>
       <Display3>Display3 - h1</Display3>
       <hr />
@@ -49,7 +49,7 @@ storiesOf('Typography', module)
       </Paragraph>
     </div>
   ))
-  .add('all no margin-top', () => (
+  .add('All no margin-top', () => (
     <div>
       <Display3 top>Display3 - h1</Display3>
       <hr />
@@ -83,7 +83,7 @@ storiesOf('Typography', module)
       </Paragraph>
     </div>
   ))
-  .add('all uppercase', () => (
+  .add('All uppercase', () => (
     <div>
       <Display3 uppercase>Display3 - h1</Display3>
       <hr />
@@ -116,6 +116,42 @@ storiesOf('Typography', module)
       <Paragraph>
         Paragraph with SpanBold. Lorem ipsum dolor{' '}
         <SpanBold uppercase>SpanBold</SpanBold>, consectetur adipiscing elit
+      </Paragraph>
+    </div>
+  ))
+  .add('Text as link', () => (
+    <div>
+      <Display3 link>Display3 - h1</Display3>
+      <hr />
+      <Display2 link>Display2 - h1</Display2>
+      <hr />
+      <Display2 link>Display2 - h1</Display2>
+      <hr />
+      <Display1 link>Display1 - h1</Display1>
+      <hr />
+      <Headline link>Heading - h1</Headline>
+      <hr />
+      <Title link>Title - h2</Title>
+      <hr />
+      <SubHeadline2 link>SubHeadline2 - h3</SubHeadline2>
+      <hr />
+      <SubHeadline1 link>SubHeadline1 - h4</SubHeadline1>
+      <hr />
+      <Paragraph link>
+        Paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </Paragraph>
+      <hr />
+      <ParagraphBold link>
+        Paragraph. text, calling something out.
+      </ParagraphBold>
+      <hr />
+      <Paragraph>
+        Paragraph with SpanBold. Lorem ipsum dolor{' '}
+        <SpanBold link>SpanBold</SpanBold>, consectetur adipiscing elit
       </Paragraph>
     </div>
   ));

@@ -1,9 +1,18 @@
 import styled, { css } from 'styled-components';
 import theme from '../../../styles/theme';
 
-const propsStyling = css`
+const modifyStyles = css`
   margin-top: ${props => props.top && 0};
   text-transform: ${props => props.uppercase && 'uppercase'};
+`;
+
+const linkStyles = css`
+  color: ${props => (props.link ? theme.colors.primary : theme.colors.text)};
+  text-decoration: ${props => (props.link ? 'underline' : 'none')};
+  cursor: ${props => (props.link ? 'pointer' : 'default')};
+  &:hover {
+    filter: ${props => (props.link ? 'brightness(120%)' : 'none')};
+  }
 `;
 
 export const Display3 = styled.h1`
@@ -11,7 +20,8 @@ export const Display3 = styled.h1`
   line-height: 5.6rem;
   margin: 3.7rem 0;
   letter-spacing: -0.112rem;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const Display2 = styled.h1`
@@ -19,7 +29,8 @@ export const Display2 = styled.h1`
   line-height: 4.8rem;
   margin: 3rem 0;
   letter-spacing: normal;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const Display1 = styled.h1`
@@ -27,7 +38,8 @@ export const Display1 = styled.h1`
   line-height: 4rem;
   margin: 2.3rem 0;
   letter-spacing: normal;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const Headline = styled.h1`
@@ -35,7 +47,8 @@ export const Headline = styled.h1`
   line-height: 3.2rem;
   margin: 1.6rem 0;
   letter-spacing: normal;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const Title = styled.h2`
@@ -44,7 +57,8 @@ export const Title = styled.h2`
   line-height: 3.2rem;
   margin: 1.6rem 0;
   letter-spacing: 0.04rem;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const SubHeadline2 = styled.h3`
@@ -52,7 +66,8 @@ export const SubHeadline2 = styled.h3`
   line-height: 2.8rem;
   margin: 1.6rem 0;
   letter-spacing: 0.064rem;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const SubHeadline1 = styled.h4`
@@ -60,20 +75,22 @@ export const SubHeadline1 = styled.h4`
   line-height: 2.4rem;
   margin: 2rem 0;
   letter-spacing: 0.06rem;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const Paragraph = styled.p`
   margin: 2rem 0;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
 
 export const ParagraphBold = Paragraph.extend`
   font-weight: 500;
-  ${propsStyling};
 `;
 
 export const SpanBold = styled.span`
   font-weight: 500;
-  ${propsStyling};
+  ${modifyStyles};
+  ${linkStyles};
 `;
